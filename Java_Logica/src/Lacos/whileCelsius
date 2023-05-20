@@ -1,0 +1,59 @@
+/*
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		//primeiro 
+    System.out.println("Digite a temperatura em Celsius: ");
+		char resposta = 's';
+    double Celcius = input.nextDouble();
+		
+    double Fahrenheit = 9.0 * Celcius /5.0 + 32.0;
+		System.out.printf("Equevalente me Fahrenheit : %.1f%n",Fahrenheit);
+		
+    System.out.print("Deseja repetir [s/n]");
+		char resposta = input.next().charAt(0);
+		//segundo
+		while(resposta != 'n' ){
+		
+		System.out.println("Digite a temperatura em Celsius: ");
+		Celcius = input.nextDouble();
+    Fahrenheit = 9.0 * Celcius /5.0 + 32.0;
+		System.out.printf("Equevalente me Fahrenheit : %.1f%n",Fahrenheit);
+		System.out.print("Deseja repetir [s/n]");
+		resposta = input.next().charAt(0);
+		    
+		}
+	}
+}
+<p> esse para utilizar o while  é necessario escrever a primeira vez e depois montar a logica da repetição</p>
+
+//o correto é assim -->
+
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		char resposta;
+		
+		do{
+	    	System.out.println("Digite a temperatura em Celsius: ");
+		    double Celcius = input.nextDouble();
+		    double Fahrenheit = 9.0 * Celcius /5.0 + 32.0;
+		    System.out.printf("Equevalente me Fahrenheit : %.1f%n",Fahrenheit);
+		    System.out.print("Deseja repetir [s/n]");
+		    resposta = input.next().charAt(0);
+		    
+		}while(resposta != 'n' && resposta == 's');
+		
+		    
+		
+	}
+}
+
+
+
+*/
