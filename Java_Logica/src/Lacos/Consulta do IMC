@@ -1,0 +1,36 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+	char escolha = 's';
+	do{
+	    System.out.println("Informe sua Altura : ");
+        double altura = input.nextDouble();
+        System.out.println("Informe seu peso : ");
+        double peso = input.nextDouble();
+        
+        double IMC = peso/Math.sqrt( altura );
+        System.out.printf("%2.2f",IMC);
+        
+        if (IMC < 18.5){
+            System.out.println("\nAbaixo do peso: ");
+        } else if(IMC < 25){
+            System.out.println("\nPeso ideal");
+        }else if(IMC < 30){
+            System.out.println("\nSobrepeso");
+        }else if (IMC < 40){
+            System.out.println("\nObesidade");
+        }else{
+            System.out.println("\nObsidade mórbida, acima dos 40");
+        }
+	    System.out.print("Deseja repetir [s/n]");
+		    escolha = input.next().charAt(0);
+	}while(escolha != 'n' && escolha == 's');
+	
+        
+       
+        
+	}
+}
+	  
