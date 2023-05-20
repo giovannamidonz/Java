@@ -19,3 +19,22 @@ public class Main
 	}
 }
 	  
+
+/*
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner input = new Scanner(System.in);
+        int[] vetorNumerico = new int[8];
+        
+        for(int z = 0; z < vetorNumerico.length; z++){
+            System.out.println("Digite um numero: ");
+            vetorNumerico[z] = input.nextInt();
+        }
+        for(int i = 0 ; i < vetorNumerico.length; i++){
+            System.out.println("os numeros armazenados foram : "+vetorNumerico[i]);
+        }
+	}
+}
+*/
