@@ -1,0 +1,31 @@
+package entidade;
+
+public class NavioGraneleiro extends Navio{
+
+    private int quantidadeEscotilhas;
+
+    public NavioGraneleiro(String nome, int quatidadePoroes, double capacidadeCarga, int quantidadeEscotilhas) {
+        super(nome, quatidadePoroes, capacidadeCarga);
+        this.quantidadeEscotilhas = quantidadeEscotilhas;
+    }
+
+    public int getQuantidadeEscotilhas() {
+        return quantidadeEscotilhas;
+    }
+
+    public void setQuantidadeEscotilhas(int quantidadeEscotilhas) {
+        this.quantidadeEscotilhas = quantidadeEscotilhas;
+    }
+
+    // o professor nesse caso construiu um ToString
+
+    @Override
+    public String toString(){
+        return "\nIdentificador : "     + this.getId()   +
+                "\nNome : "             + this.getNome() +
+                "\nQuant. de porões :"  + this.getQuatidadePoroes() +
+                "\nCapacidade de carga :"+ this.getCapacidadeCarga() +
+                "\nQuant. de escotilhas :" + this.getQuantidadeEscotilhas();
+    }
+
+}
