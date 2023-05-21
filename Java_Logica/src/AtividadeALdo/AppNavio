@@ -1,0 +1,34 @@
+package Aplicacao;
+import entidade.NavioContainer;
+import entidade.NavioGraneleiro;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class AppNavio {
+    public static void main(String[] args) {
+//declarar as listas
+        List<NavioGraneleiro> listaNavioGraneleiro  = new ArrayList<>();
+        List<NavioContainer> listaNavioContainer    = new ArrayList<>();
+
+        listaNavioGraneleiro.add(new NavioGraneleiro("Estrela do Mar", 4, 50000, 4 ));
+        listaNavioGraneleiro.add(new NavioGraneleiro("Bobespoja",10,76000,22));
+        listaNavioGraneleiro.add(new NavioGraneleiro("LataVelha",24,132000,9));
+
+        listaNavioContainer.add(new NavioContainer("Arrecifes",2,21000,6,25));
+        listaNavioContainer.add(new NavioContainer("Long",7,54000,7,30));
+        listaNavioContainer.add(new NavioContainer("Pan",2,12000,4,16));
+
+        System.out.println("\nNavios Container:");
+        for (NavioContainer navioContainer : listaNavioContainer) {
+            System.out.println(navioContainer);
+        }
+
+        System.out.println("\nNavios Graneleiros:");
+        for (NavioGraneleiro navioGraneleiro : listaNavioGraneleiro)
+        {
+            System.out.println(navioGraneleiro);
+        }
+
+    }
+}
