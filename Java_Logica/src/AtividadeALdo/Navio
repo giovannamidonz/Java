@@ -1,0 +1,59 @@
+package entidade;
+
+public abstract class Navio {
+    private int id;
+    //o professor ensinou como fazer um gerador de identificador para os naviso
+    private static int contadorId = 0;
+    private String nome;
+    private int quatidadePoroes;
+    private double capacidadeCarga;
+    private String disponilidade;
+
+    public Navio(String nome, int quatidadePoroes, double capacidadeCarga) {
+        super();
+        contadorId++;
+        this.id = contadorId;
+        this.nome = nome;
+        this.quatidadePoroes = quatidadePoroes;
+        this.capacidadeCarga = capacidadeCarga;
+        this.disponilidade ="Vazio";
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+    public void iniciarCarragamento(){
+        this.disponilidade = "Carregando";
+    }
+    public void bloquearCarragamento(){
+        this.disponilidade = "Lotado";
+    }
+
+    public int getQuatidadePoroes() {
+        return quatidadePoroes;
+    }
+
+    public double getCapacidadeCarga() {
+        return capacidadeCarga;
+    }
+
+    public String getDisponilidade() {
+        return disponilidade;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setQuatidadePoroes(int quatidadePoroes) {
+        this.quatidadePoroes = quatidadePoroes;
+    }
+
+    public void setCapacidadeCarga(double capacidadeCarga) {
+        this.capacidadeCarga = capacidadeCarga;
+    }
+}
