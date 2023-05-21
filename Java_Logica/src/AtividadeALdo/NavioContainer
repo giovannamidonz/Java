@@ -1,0 +1,37 @@
+package entidade;
+
+public class NavioContainer extends Navio {
+    private int quantidadeGuidastes;
+    private int quantidadeCamadas;
+
+    public NavioContainer(String nome, int quatidadePoroes, double capacidadeCarga,int quantidadeCamadas,int quantidadeGuidastes) {
+        super(nome, quatidadePoroes, capacidadeCarga);
+        this.quantidadeCamadas= quantidadeCamadas;
+        this.quantidadeGuidastes =quantidadeGuidastes;
+    }
+
+    @Override
+    public String toString() {
+        return "\nIdentificador......: " + this.getId() +
+                "\nNome...............: " + this.getNome() +
+                "\nQuant. de porões...: " + this.getQuatidadePoroes() +
+                "\nCapacidade de carga: " + this.getCapacidadeCarga() +
+                "\nQuant. câmaras.....: " + this.getQuantidadeCamadas() +
+                "\nQuant. guindastes..: " + this.getQuantidadeGuidastes();
+    }
+    public int getQuantidadeGuidastes() {
+        return quantidadeGuidastes;
+    }
+
+    public int getQuantidadeCamadas() {
+        return quantidadeCamadas;
+    }
+
+    public void setQuantidadeGuidastes(int quantidadeGuidastes) {
+        this.quantidadeGuidastes = quantidadeGuidastes;
+    }
+
+    public void setQuantidadeCamadas(int quantidadeCamadas) {
+        this.quantidadeCamadas = quantidadeCamadas;
+    }
+}
