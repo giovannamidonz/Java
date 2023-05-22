@@ -1,0 +1,56 @@
+package Aplicacao;
+
+import java.util.Date;
+
+public class AppConsumo {
+	
+	private static int contadorId=0;
+	private int idConsumo;
+	private Date data;
+	private char tipoConsumo;
+	private char tipoCliente;
+	private double valorConsumo;
+	private double valorConta;
+	public AppConsumo(char tipoConsumo, char tipoCliente, double valorConsumo, double valorConta) {
+		super();
+		this.tipoConsumo = tipoConsumo;
+		this.tipoCliente = tipoCliente;
+		this.valorConsumo = valorConsumo;
+		this.valorConta = valorConta;
+	}
+	
+	
+	public char getTipoConsumo() {
+		return tipoConsumo;
+	}
+	public void setTipoConsumo(char tipoConsumo) {
+		this.tipoConsumo = tipoConsumo;
+	}
+	public char getTipoCliente() {
+		return tipoCliente;
+	}
+	public void setTipoCliente(char tipoCliente) {
+		this.tipoCliente = tipoCliente;
+	}
+	public double getValorConsumo() {
+		return valorConsumo;
+	}
+	public void setValorConsumo(double valorConsumo) {
+		this.valorConsumo = valorConsumo;
+	}
+	public double getValorConta() {
+		return valorConta;
+	}
+	public void setValorConta(double valorConta) {
+		this.valorConta = valorConta;
+	}
+	public int getIdConsumo() {
+		return idConsumo;
+	}
+	public Date getData() {
+		return data;
+	}
+	
+	
+	
+}
