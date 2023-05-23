@@ -1,161 +1,24 @@
-import java.util.Date;
-
-public class Consumo {
-
-private static int idConsumo;
-private Date data;
-private char tipoConsumo;
-private char tipoCliente;
-private double valorConsumo;
-private double valorConta;
-
-	
-
-public Consumo(double valorConsumo) {
-	this.idConsumo ++;
-	this.data = new Date();
-	this.tipoConsumo = 'c';
-	this.tipoCliente = 'p';
-	this.valorConsumo =  valorConsumo;
-fechaConta(valorConsumo);	
-}
-
-public Consumo(double valorConsumo, char tipoCliente) {
-	
-	this.idConsumo ++;
-	this.data = new Date();
-	this.tipoConsumo = 'p';
-	this.tipoCliente = tipoCliente;
-	this.valorConsumo =  valorConsumo;
-	fechaConta(valorConsumo, tipoCliente);
-}
-
-
-
-public int getIdConsumo() {
-	return idConsumo;
-}
-
-
-
-public Date getData() {
-	return data;
-}
-
-
-
-public char getTipoConsumo() {
-	return tipoConsumo;
-}
-
-
-
-public char getTipoCliente() {
-	return tipoCliente;
-}
-
-
-
-public double getValorConsumo() {
-	return valorConsumo;
-}
-
-
-
-public double getValorConta() {
-	return valorConta;
-}
-
-
-
-
-public void fechaConta(double valorConsumo) {
-	
-	this.valorConta = valorConsumo + (valorConsumo*0.1);
-	
-	
-}
-
-public void fechaConta(double valorConsumo, char tipoCliente) {
-	
-	
-if(tipoCliente == 'f') {
-		
-		this.valorConta = valorConsumo - 10;
-		
-	}
-		if(tipoCliente == 'a' ) {
-			if(valorConsumo<=30) {
-			 this.valorConta = valorConsumo - 3;
-			 
-			} 
-			else {
-			
-			this.valorConta = valorConsumo-5;
-			}
-			
-		}
-			else {		
-					this.valorConta = valorConsumo;			
-		}
-		
-		
-	}
-
-@Override
-public String toString() {
-	return "Consumo [idConsumo=" + idConsumo + ", data=" + data + ", tipoConsumo=" + tipoConsumo + ", tipoCliente="
-			+ tipoCliente + ", valorConsumo=" + valorConsumo + ", valorConta=" + valorConta + "]";
-}
-	
-	
-}
-
-
-________________________________________________________________________________________________________________________
-
-
 package Aplicacao;
-import entidade.NavioContainer;
-import entidade.NavioGraneleiro;
 
-import java.util.ArrayList;
-import java.util.List;
+import entidade.Consumo;
 
-public class AppNavio {
-    public static void main(String[] args) {
-//declarar as listas
-        List<NavioGraneleiro> listaNavioGraneleiro  = new ArrayList<>();
-        List<NavioContainer> listaNavioContainer    = new ArrayList<>();
+public class AppConsumo {
+    public static void main(String[] args)  throws Exception {
 
-        listaNavioGraneleiro.add(new NavioGraneleiro("Estrela do Mar", 4, 50000, 4 ));
-        listaNavioGraneleiro.add(new NavioGraneleiro("Bobespoja",10,76000,22));
-        listaNavioGraneleiro.add(new NavioGraneleiro("LataVelha",24,132000,9));
+        Consumo consumo = new Consumo(35);
+        System.out.println(consumo.toString());
 
-        listaNavioContainer.add(new NavioContainer("Arrecifes",2,21000,6,25));
-        listaNavioContainer.add(new NavioContainer("Long",7,54000,7,30));
-        listaNavioContainer.add(new NavioContainer("Pan",2,12000,4,16));
 
-        System.out.println("\nNavios Container:");
-        for (NavioContainer navioContainer : listaNavioContainer) {
-            System.out.println(navioContainer);
-        }
+        Consumo consumo1 = new Consumo('f', 25);
+        System.out.println(consumo1.toString());
 
-        System.out.println("\nNavios Graneleiros:");
-        for (NavioGraneleiro navioGraneleiro : listaNavioGraneleiro)
-        {
-            System.out.println(navioGraneleiro);
-        }
 
+        Consumo consumo2 = new Consumo('a', 23);
+        System.out.println(consumo2.toString());
+
+
+        Consumo consumo3 = new Consumo('a', 35);
+        System.out.println(consumo3.toString()); 
+        
     }
 }
-
-
-
-
-
-
-
-
-
-
