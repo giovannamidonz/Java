@@ -1,56 +1,92 @@
-package Aplicacao;
+package entidade;
 
 import java.util.Date;
 
-public class AppConsumo {
-	
-	private static int contadorId=0;
-	private int idConsumo;
-	private Date data;
-	private char tipoConsumo;
-	private char tipoCliente;
-	private double valorConsumo;
-	private double valorConta;
-	public AppConsumo(char tipoConsumo, char tipoCliente, double valorConsumo, double valorConta) {
-		super();
-		this.tipoConsumo = tipoConsumo;
-		this.tipoCliente = tipoCliente;
-		this.valorConsumo = valorConsumo;
-		this.valorConta = valorConta;
-	}
-	
-	
-	public char getTipoConsumo() {
-		return tipoConsumo;
-	}
-	public void setTipoConsumo(char tipoConsumo) {
-		this.tipoConsumo = tipoConsumo;
-	}
-	public char getTipoCliente() {
-		return tipoCliente;
-	}
-	public void setTipoCliente(char tipoCliente) {
-		this.tipoCliente = tipoCliente;
-	}
-	public double getValorConsumo() {
-		return valorConsumo;
-	}
-	public void setValorConsumo(double valorConsumo) {
-		this.valorConsumo = valorConsumo;
-	}
-	public double getValorConta() {
-		return valorConta;
-	}
-	public void setValorConta(double valorConta) {
-		this.valorConta = valorConta;
-	}
-	public int getIdConsumo() {
-		return idConsumo;
-	}
-	public Date getData() {
-		return data;
-	}
-	
-	
-	
+public class Consumo {
+    private static int contadorId=0;
+    private int idConsumo;
+    private Date data;
+    private char tipoConsumo;
+    private char tipoCliente;
+    private double valorConsumo;
+    private double valorConta;
+
+    public Consumo(double valorConsumo) {
+        contadorId++;
+        this.idConsumo= contadorId;
+        this.data= new Date();
+        this.tipoCliente= 'p';
+        this.tipoConsumo = 'c';
+        this.valorConsumo = valorConsumo;
+        fechamentoConta(valorConsumo);
+    }
+
+    public Consumo(char tipoCliente, double valorConsumo) {
+        contadorId++;
+        this.idConsumo= contadorId;
+        this.data= new Date();
+        this.tipoConsumo = 'p';
+        this.tipoCliente = tipoCliente;
+        this.valorConsumo = valorConsumo;
+        fechamento(valorConsumo,tipoCliente);
+    }
+//metodo
+    public void fechamentoConta(double valorConsumo){
+        this.valorConta = valorConsumo + (valorConsumo*0.1);
+
+    }
+
+    public void fechamento(double valorConsumo,char tipoCliente){
+        if(tipoCliente == 'f') {
+
+            this.valorConta = valorConsumo - 10;
+
+        }
+        if(tipoCliente == 'a' ) {
+            if(valorConsumo <= 30) {
+                this.valorConta = valorConsumo - 3;
+            }else {
+                this.valorConta = valorConsumo - 5;
+            }
+        }else {
+            this.valorConta = valorConsumo;
+        }
+    }
+    public static int getContadorId() {
+        return contadorId;
+    }
+
+    public int getIdConsumo() {
+        return idConsumo;
+    }
+
+    public Date getData() {
+        return data;
+    }
+
+    public char getTipoConsumo() {
+        return tipoConsumo;
+    }
+
+    public char getTipoCliente() {
+        return tipoCliente;
+    }
+
+    public double getValorConsumo() {
+        return valorConsumo;
+    }
+
+    public double getValorConta() {
+        return valorConta;
+    }
+
+    @Override
+    public String toString() {
+        return  "Id....................:" + idConsumo +
+                "Data..................:" + data +
+                "Tipo do Consumo.......:" + tipoConsumo +
+                "Tipo de Cliente.......:" + tipoCliente +
+                "Valor do Consumo......:"+ valorConsumo +
+                "Valor da Conta........:" + valorConta ;
+    }
 }
