@@ -19,3 +19,33 @@ public class AulaExececoes {
 
 //quando ultilizamos o try o catch se torna obrigatória 
 // o catch recebe um objeto do tipo "Exeception" ( lembrando dos conceitos de herança, todas as execeções do java são classes filhas de exeception )  
+
+
+// utilizando com do while 
+
+/*
+package AtivadadeEmSala;
+import java.util.Scanner;
+public class AulaExececoes {
+    static Scanner input = new Scanner(System.in);
+    public static void main(String[] args) {
+    do{
+        try{
+            System.out.println("digite um numero interio :");
+            int numero1 = input.nextInt();
+
+            System.out.println("digite um segundo numeor inteiro: ");
+            int numero2 = input.nextInt();
+
+            System.out.println(numero1 + " + " + numero2 + " = "+ (numero1 + numero2));
+            break;
+        }catch(Exception ex){
+            System.out.println("ERRO !");
+            input.nextLine();// limpando o bafo
+        }
+    }while(true);
+
+        input.close();
+    }
+}
+*/
