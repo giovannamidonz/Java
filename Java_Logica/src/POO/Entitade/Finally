@@ -1,0 +1,24 @@
+package AtivadadeEmSala;
+import java.util.Scanner;
+public class Finallly {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        try{
+            int dividendo,divisor;
+            System.out.println("Digite o valor do dividendo: ");
+            dividendo = input.nextInt();
+
+            System.out.println("Digite o valor do divisor: ");
+            divisor = input.nextInt();
+
+            if(divisor == 0){
+                throw new Exception("nao é permitido dividir por zero !!!");
+            }
+            System.out.println(dividendo + " / " + divisor + " = " + (dividendo/divisor));
+        }catch(Exception zero){
+            System.out.println("ERRO ! " + zero.getMessage());
+        }finally{
+            System.out.println("Bloco finalizado!!!");
+        }
+    }
+}
