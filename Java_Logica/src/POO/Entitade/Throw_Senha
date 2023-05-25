@@ -1,0 +1,23 @@
+package AtivadadeEmSala;
+import java.util.Scanner;
+public class Throw {
+    public static final String SENHASECRETA = "123456";
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        do{
+           try{
+
+               System.out.println("Digite a senha : ");
+               String senha = input.nextLine();
+               if(!senha.equals(SENHASECRETA)){
+                   throw new Exception("senha invalida");
+               }
+               System.out.println("Senha correta!!! ");
+               break;
+           }catch (Exception senha){
+               System.out.println(senha.getMessage());
+           }
+       }while(true);
+    }
+}
