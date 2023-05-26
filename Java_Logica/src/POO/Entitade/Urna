@@ -1,0 +1,40 @@
+package entidade;
+import java.util.ArrayList;
+import java.util.List;
+public class Urna {
+    private int secao;
+    private List<Integer> votos;
+//contrutor
+    public Urna(int secao) {
+        this.secao = secao;
+        this.votos = new ArrayList<>();
+    }
+
+// metodos
+    public void receberVoto(int voto){
+        this.votos.add(voto);
+    }
+
+    public void ordenar(){
+        votos.sort(null);
+    }
+    public int primeiro() throws IndexOutOfBoundsException{
+        return votos.get(0);
+    }
+    // throw = repassar
+    // throws = criar
+
+
+// get e set
+    public void setSecao(int secao) {
+        this.secao = secao;
+    }
+
+    public int getSecao() {
+        return secao;
+    }
+
+    public List<Integer> getVotos() {
+        return votos;
+    }
+}
