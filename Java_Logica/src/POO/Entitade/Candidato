@@ -1,0 +1,34 @@
+package entidade;
+
+public class Candidato {
+    private int numero;
+    private String nome;
+    private int votosObtidos;
+//contrutores
+    public Candidato(int numero, String nome) {
+        this.numero = numero;
+        this.nome = nome;
+        this.votosObtidos = 0;
+    }
+// metodos
+    public void receberVoto(){
+        votosObtidos++;
+    }
+
+//set e set
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public int getVotosObtidos() {
+        return votosObtidos;
+    }
+}
