@@ -1,0 +1,22 @@
+package PraticaLogica;
+import java.util.Scanner;
+public class add {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Quantos numeros voce deseja digitar ?");
+        int n = input.nextInt();
+        int[] addVetor = new int[n];
+        for(int i = 0 ; i < n; i++){
+            System.out.println("digite um valor: ");
+            addVetor[i] = input.nextInt();
+        }
+
+        for(int x = 0 ; x < n ; x++){
+            if(addVetor[x] < 0){
+                System.out.println(addVetor[x]);
+            }
+        }
+
+    }
+}
