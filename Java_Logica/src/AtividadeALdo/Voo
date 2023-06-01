@@ -1,12 +1,15 @@
 package AtivadadeEmSala;
 
-public class Aeronave {
-    private boolean disponibilidade;
-    public Aeronave() {
-        this.disponibilidade = true;
+public class Voo {
+
+    private Aeronave aeronave;
+
+    public Voo(Aeronave aeronave){
+        this.aeronave = aeronave;
     }
-    public boolean indisponibilizar(){
-        return this.disponibilidade = false;
+
+    public void escalarAeronave(){
+        aeronave.indisponibilizar();
     }
 
 
