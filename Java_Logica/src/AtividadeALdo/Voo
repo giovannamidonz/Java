@@ -1,0 +1,13 @@
+package AtivadadeEmSala;
+
+public class Aeronave {
+    private boolean disponibilidade;
+    public Aeronave() {
+        this.disponibilidade = true;
+    }
+    public boolean indisponibilizar(){
+        return this.disponibilidade = false;
+    }
+
+
+}
