@@ -1,0 +1,49 @@
+/*package PraticaLogica;
+import java.util.Scanner;
+public class Crud {
+    static Scanner input = new Scanner(System.in);
+    static int cont = 0;
+    static int[] array = new int[5];
+    public static void main(String[] args) {
+        int escolha=0;
+
+        do {
+            System.out.println("========================");
+            System.out.println("==========MENU==========");
+            System.out.println("========================");
+            System.out.println("=== 1 - CADASTRAR ======");
+            System.out.println("=== 2 - CONSULTAR ======");
+            System.out.println("=== 3 - ALTERAR ========");
+            System.out.println("=== 4 - EXCLUIR ========");
+            System.out.println("=== 5 - LISTAR =========");
+            System.out.println("=== 0 - FINALIZAR ======");
+
+       switch (escolha){
+            case 1 :
+                cadastrarObjeto();
+                break;
+            case 2 :
+                consultarObjeto();
+                break;
+            case 3 :
+                alterarObjeto();
+                break;
+            case 4 :
+                exluirObjeto();
+                break;
+            case 5 :
+                listarObjeto();
+                break;
+            case 0 :
+                System.out.println("Objeto finalizado!!");
+                break;
+            default:
+                System.out.println("Opcao incorreta!!");
+        }
+
+        }while(escolha != 0);
+        input.close();
+    }
+
+}
+*/
