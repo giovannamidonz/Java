@@ -1,0 +1,32 @@
+package ProvaPOO;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class APPMaquina {
+
+	public static void main(String[] args) {
+	
+		Maquina obj1 = new Maquina(156,"robo recepcionista");
+		
+		obj1.registrarProducao(7);
+		obj1.registrarProducao(4);
+		obj1.registrarProducao(2);
+		
+		
+		int dias;
+		try {
+			dias = obj1.producaoUltimaSemana();
+			System.out.println(dias );
+			
+			
+		}catch (IndexOutOfBoundsException e) {
+			System.out.println("Esta máquina ainda não teve produção");
+			return;
+		}
+		
+		 
+	}	 
+		 
+}
